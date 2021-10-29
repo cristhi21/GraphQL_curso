@@ -55,3 +55,11 @@ npm i graphql express-graphql graphql-tools
 
 
 El schema me permite que es lo quepuedo consultar
+
+
+http://localhost:3000/graphql
+```
+{
+  hello
+}
+```
