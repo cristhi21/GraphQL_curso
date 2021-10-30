@@ -62,4 +62,66 @@ http://localhost:3000/graphql
 {
   hello
 }
+
+
+{
+  greet(name:"vargas")
+}
+```
+
+
+Ejemplo de consulta a task
+```
+{
+  task {
+    _id,
+    title
+  }
+}
+```
+
+## Mutation
+
+Cuando hacemos una mutacion a traves de un input ponemos los datos de entrada
+Example de mutacion
+```
+mutation {
+  createTask(input: {
+    title: "Task One",
+    description: "Example task description"
+  }) {
+    _id
+    title
+    description
+    number
+  }
+}
+```
+
+Otra insersion: 
+```
+mutation {
+  createTask(input: {
+    title: "Task four",
+    description: "Example four description"
+    number: 444
+  }) {
+    _id
+    title
+    description
+    number
+  }
+}
+```
+
+Consultar datos
+```
+query {
+  task{
+    _id
+    title
+    description
+    number
+  }
+}
 ```
