@@ -3,8 +3,9 @@ export const resolvers = {
         hello: () => {
             return 'Hello World con graphql'
         },
-        greet: () => {
-            return 33;
+        greet: (root, args) => {
+            console.log(args);
+            return `Hello ${args.name}`;
         }
     }
 };
