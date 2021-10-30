@@ -6,7 +6,8 @@ import { resolvers } from "./resolvers";
 const typeDefs = `
 
     type Query {
-        hello: String
+        hello: String,
+        greet: Int
     }
 
 `;
