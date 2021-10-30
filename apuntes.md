@@ -125,3 +125,8 @@ query {
   }
 }
 ```
+
+## Persistencia con MongoDB
+npm install mongoose
+
+
