@@ -172,3 +172,21 @@ mutation {
   }
 }
 ```
+
+### Actualizar usuario
+
+```
+mutation {
+  updateUser(_id:"617ffb663132b2821d71b365",
+  input: {
+    firstname: "Isa"
+    lastname: "zara"
+    age: 1
+  }
+  ) {
+    _id
+    lastname
+    firstname
+  }
+}
+```

@@ -33,6 +33,9 @@ export const resolvers = {
         },
         async deleteUser(_, { _id}) {
             return await User.findByIdAndDelete(_id);
+        },
+        async updateUser(_, {_id, input}){
+            return await User.findByIdAndUpdate(_id, input, {new: true} );
         }
     }
 };
