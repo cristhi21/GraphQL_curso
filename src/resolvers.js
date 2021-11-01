@@ -20,7 +20,6 @@ export const resolvers = {
     },
     Mutation: {
         createTask(_, { input }){
-            // console.log(input);
             input._id = tasks.length;
             tasks.push(input);
             return input;
@@ -31,6 +30,9 @@ export const resolvers = {
             console.log(newUser);
             await newUser.save();
             return newUser;
+        },
+        async deleteUser(_, { _id}) {
+            return await User.findByIdAndDelete(_id);
         }
     }
 };

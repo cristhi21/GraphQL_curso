@@ -136,7 +136,7 @@ Contex
 Es para poder pasar cosas entre los resolves
 Sirve en casos de autenticacion, cadenas de conexion
 
-Creacion de usuario
+#### Creacion de un usuario
 ```
 mutation {
   createUser(input: {
@@ -151,7 +151,7 @@ mutation {
 }
 ```
 
-Consulta de usuario
+### Consultar usuarios
 ```
 {
   users {
@@ -162,3 +162,13 @@ Consulta de usuario
 }
 ```
 
+### Borrar usuario
+
+```
+mutation {
+  deleteUser(_id:"617ffb097b46f8210c48c7b4") {
+    _id
+    firstname
+  }
+}
+```
