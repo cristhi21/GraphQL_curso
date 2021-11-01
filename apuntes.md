@@ -130,3 +130,35 @@ query {
 npm install mongoose
 
 
+
+Contex
+
+Es para poder pasar cosas entre los resolves
+Sirve en casos de autenticacion, cadenas de conexion
+
+Creacion de usuario
+```
+mutation {
+  createUser(input: {
+    firstname: "Zonia"
+    lastname: "vargas"
+    age: 25
+  }) {
+  	_id
+    firstname
+    age  
+  }
+}
+```
+
+Consulta de usuario
+```
+{
+  users {
+    _id
+    firstname
+    lastname
+  }
+}
+```
+
