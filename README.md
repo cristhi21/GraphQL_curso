@@ -1,60 +1,76 @@
+# Curso Graphql, Curso Practico con Nodejs y Mongodb
 
+Fuentes:
+
+- [Fazt, Youtube](https://www.youtube.com/watch?v=Wl8O6wW4FJU)
 - [Graph QL](https://graphql.org/)
 - [Documentacion Apollo](https://www.apollographql.com/)
 
 Crear un servidor y como integrarlo con los framework del frontend
 
-1. Instalar Express
+## 1. Instalar Dependencias
+
+- [Express](https://expressjs.com/es/)
+- [Babel](https://babeljs.io)
+- [Usar babel con Node](https://www.npmjs.com/package/@babel/node)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
+- [Graphql](https://graphql.org/)
+- [NPM Graphql](https://www.npmjs.com/package/graphql)
+
+
 ```sh
+# Express
 npm i express
-```
 
-Probar
-node index.js
-
-- [Instalar Babel](https://babeljs.io)
+# Babeljs
 npm install --save-dev @babel/core @babel/cli @babel/preset-env
 
-- [Usar babel con Node](https://www.npmjs.com/package/@babel/node)
+# Babel con Node
 npm install --save-dev @babel/node
 
-Crear script build en package.json para compilar con babel ficheros de src y enviar lso a carpeta dist
-
-```bash
-# Cuando ya terminemos de desarrollar
-npm run build
-
-# Cuando estemos desarrollando
-npm start
-```
-
-[Instalar nodemon](https://www.npmjs.com/package/nodemon)
+# Nodemon
 npm i nodemon -D
 
-
-> Nota: Por si da problema
-> Limpiar cache
-> npm cache clean --force
-> Borrar node_modules
-> rm -rf node_modules
-> A lo ultimo me toco instalar nodemon globalmente
-
-```bash
-npm install -g nodemon
-
 # Instalar rimraf  , para eliminar carpetas, sisver para cualquier sistema operativo
-
 npm i rimraf
+
+# Graphql
+npm i graphql express-graphql graphql-tools
 ```
 
-Integrar Graphql
-[Graphql](https://graphql.org/)
-https://www.npmjs.com/package/graphql
 
-npm i graphql express-graphql graphql-tools
+> Nota: Por si da problema ejecutar los scripts del package.json hacer los siguiente:
+```sh
+# Limpiar cache
+npm cache clean --force
+
+# Borrar node_modules
+rm -rf node_modules
+``` 
+> Nota: Me toco instalar nodemon globalmente asi:
+
+```sh
+npm install -g nodemon
+```
+
+## 2. Crear scripts en package.json para compilar con babel ficheros de src y enviar los a carpeta dist
+
+```bash
+# Cuando ya terminemos de desarrollar y queremos tener nuestro artefacto en la carpeta dist
+npm run build
+
+# Cuando estemos desarrollando y querramos ver los cambios que realicemos con nodemon
+npm start
+
+# Ejecutar dist/index
+npm run serve
+
+# Borrar carpeta dist
+npm run clean
+```
 
 
-El schema me permite que es lo quepuedo consultar
+El schema me permite que es lo que puedo consultar
 
 
 http://localhost:3000/graphql
@@ -126,7 +142,7 @@ query {
 }
 ```
 
-## Persistencia con MongoDB
+## 3.  Persistencia con MongoDB
 npm install mongoose
 
 
